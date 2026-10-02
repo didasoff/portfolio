@@ -1,62 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M. Didar Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohommad Didar — WordPress Developer</title>
+<meta name="description" content="WordPress Developer specializing in WordPress, WooCommerce, PHP, custom functionality, troubleshooting, performance and hosting.">
+<style>
+:root{--bg:#0b0f19;--panel:#111827;--panel2:#151d2d;--text:#eef2ff;--muted:#a9b3c7;--line:#263149;--accent:#7c5cff;--accent2:#20c997;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(11,15,25,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:20px;font-weight:800;letter-spacing:-.5px}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:25px;color:var(--muted);font-size:14px}.navlinks a:hover{color:#fff}
+.hero{padding:100px 0 85px;background:radial-gradient(circle at 75% 20%,rgba(124,92,255,.2),transparent 32%),radial-gradient(circle at 15% 30%,rgba(32,201,151,.09),transparent 28%)}
+.badge{display:inline-flex;padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:#cdd5e8;background:rgba(255,255,255,.03);font-size:13px;margin-bottom:22px}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.02;letter-spacing:-3px;max-width:850px}
+.gradient{background:linear-gradient(90deg,#fff,#a99aff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:690px;color:var(--muted);font-size:18px;margin:24px 0 32px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:12px 19px;border-radius:10px;font-weight:700;font-size:14px;border:1px solid var(--line)}.primary{background:var(--accent);border-color:var(--accent)}.secondary{background:transparent}
+section{padding:82px 0}.eyebrow{color:#9d8cff;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:800;margin-bottom:10px}h2{font-size:38px;letter-spacing:-1.4px;margin-bottom:12px}.sectionintro{color:var(--muted);max-width:680px;margin-bottom:34px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:25px}.card h3{font-size:19px;margin-bottom:9px}.card p{color:var(--muted);font-size:14px}.icon{width:40px;height:40px;display:grid;place-items:center;border-radius:10px;background:rgba(124,92,255,.12);margin-bottom:18px;color:#b7aaff;font-weight:900}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:17px}.tag{font-size:11px;color:#cbd4e7;border:1px solid var(--line);border-radius:999px;padding:4px 8px}
+.project{display:flex;flex-direction:column;justify-content:space-between;min-height:255px}.project .type{font-size:12px;color:#8f9ab0;text-transform:uppercase;letter-spacing:1.4px;margin-bottom:10px}.project h3{font-size:21px}.project p{margin-top:8px}.project .result{margin-top:20px;color:#dce4f5;font-size:13px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:start}.about p{color:var(--muted);margin-bottom:16px}
+.skills{display:flex;flex-wrap:wrap;gap:10px}.skill{padding:9px 12px;border-radius:9px;background:var(--panel);border:1px solid var(--line);font-size:13px}
+.timeline{display:grid;gap:14px}.timeline div{padding:18px 20px;border-left:2px solid var(--accent);background:var(--panel);border-radius:0 12px 12px 0}.timeline strong{display:block}.timeline span{color:var(--muted);font-size:13px}
+.contact{background:linear-gradient(135deg,rgba(124,92,255,.16),rgba(32,201,151,.06));border:1px solid var(--line);border-radius:22px;padding:42px}.contact p{color:var(--muted);max-width:650px;margin:10px 0 25px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#7f8ba2;font-size:13px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}.about{grid-template-columns:1fr}.navlinks{display:none}.hero{padding-top:75px}h1{letter-spacing:-2px}.contact{padding:28px}}
+</style>
 </head>
-<body class="bg-gray-100">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold text-gray-800">M. Didar</h1>
-            <ul class="flex space-x-4">
-                <li><a href="#about" class="text-gray-600 hover:text-blue-500">About</a></li>
-                <li><a href="#projects" class="text-gray-600 hover:text-blue-500">Projects</a></li>
-                <li><a href="#contact" class="text-gray-600 hover:text-blue-500">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<body>
 
-    <!-- Hero Section -->
-    <section class="text-center py-16 bg-blue-500 text-white">
-        <h2 class="text-4xl font-bold">Hello, I'm M. Didar</h2>
-        <p class="mt-2 text-lg">A Web Developer specialized in Backend & Frontend</p>
-    </section>
+<nav>
+  <div class="container nav">
+    <a class="logo" href="#">Didar<span>.</span></a>
+    <div class="navlinks">
+      <a href="#services">Services</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
 
-    <!-- About Section -->
-    <section id="about" class="container mx-auto p-8 text-center">
-        <h2 class="text-2xl font-bold text-gray-800">About Me</h2>
-        <p class="mt-2 text-gray-600">I am a passionate web developer with experience in building modern web applications using PHP, Tailwind CSS, CSS, and HTML.</p>
-    </section>
+<header class="hero">
+  <div class="container">
+    <div class="badge">WordPress Developer • WooCommerce • PHP</div>
+    <h1>I build, fix & improve <span class="gradient">WordPress websites.</span></h1>
+    <p>
+      WordPress developer focused on practical business solutions — custom WooCommerce functionality,
+      PHP development, website troubleshooting, performance, tracking and server-side problem solving.
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="#projects">View My Work</a>
+      <a class="btn secondary" href="#contact">Let's Work Together</a>
+    </div>
+  </div>
+</header>
 
-    <!-- Projects Section -->
-    <section id="projects" class="bg-gray-200 py-8">
-        <div class="container mx-auto">
-            <h2 class="text-2xl font-bold text-center text-gray-800">Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-                <div class="bg-white p-4 shadow-md rounded-lg">
-                    <h3 class="text-xl font-bold">Project 1</h3>
-                    <p class="text-gray-600">E-commerce website using React and Firebase.</p>
-                </div>
-                <div class="bg-white p-4 shadow-md rounded-lg">
-                    <h3 class="text-xl font-bold">Project 2</h3>
-                    <p class="text-gray-600">CRM Software built with Next.js and MongoDB.</p>
-                </div>
-                <div class="bg-white p-4 shadow-md rounded-lg">
-                    <h3 class="text-xl font-bold">Project 3</h3>
-                    <p class="text-gray-600">Personal Blog with trending news using MERN Stack.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="services">
+<div class="container">
+  <div class="eyebrow">What I do</div><h2>Development that solves business problems.</h2>
+  <p class="sectionintro">I work across the WordPress stack, from Elementor and WooCommerce changes to custom PHP, databases, tracking and server configuration.</p>
+  <div class="grid">
+    <article class="card"><div class="icon">WP</div><h3>WordPress Development</h3><p>Theme customization, Elementor builds, custom functionality, hooks, filters, debugging and website maintenance.</p><div class="tags"><span class="tag">WordPress</span><span class="tag">PHP</span><span class="tag">Elementor</span></div></article>
+    <article class="card"><div class="icon">WC</div><h3>WooCommerce</h3><p>Checkout customization, product options, shipping rules, order management, custom dashboards and WooCommerce troubleshooting.</p><div class="tags"><span class="tag">WooCommerce</span><span class="tag">CartFlows</span><span class="tag">PHP</span></div></article>
+    <article class="card"><div class="icon">&lt;/&gt;</div><h3>Custom PHP & Integrations</h3><p>Custom admin tools, database operations, order workflows, APIs and business-specific WordPress functionality.</p><div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">REST/API</span></div></article>
+    <article class="card"><div class="icon">⚙</div><h3>Bug Fixing & Support</h3><p>Investigating broken functionality, SSL/domain issues, plugin conflicts, database problems and WordPress errors.</p><div class="tags"><span class="tag">Debugging</span><span class="tag">Support</span><span class="tag">Troubleshooting</span></div></article>
+    <article class="card"><div class="icon">⚡</div><h3>Performance & Tracking</h3><p>Core Web Vitals troubleshooting, caching/performance work and conversion tracking with Google Tag Manager and advertising platforms.</p><div class="tags"><span class="tag">GTM</span><span class="tag">GA</span><span class="tag">Performance</span></div></article>
+    <article class="card"><div class="icon">☁</div><h3>Hosting & Deployment</h3><p>Hands-on experience with VPS hosting, CloudPanel, Cloudflare, DNS, SSL, PHP versions, databases and website migration tasks.</p><div class="tags"><span class="tag">VPS</span><span class="tag">Cloudflare</span><span class="tag">CloudPanel</span></div></article>
+  </div>
+</div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container mx-auto p-8 text-center">
-        <h2 class="text-2xl font-bold text-gray-800">Contact Me</h2>
-        <p class="text-gray-600">Feel free to reach out via email at <a href="mailto:didasoff@gmail.com" class="text-blue-500">didasoff@gmail.com</a></p>
-    </section>
+<section id="projects">
+<div class="container">
+  <div class="eyebrow">Selected work</div><h2>Real problems I've worked on.</h2>
+  <p class="sectionintro">These projects reflect the type of practical WordPress work I can discuss with clients or employers in an interview.</p>
+  <div class="grid">
+    <article class="card project"><div><div class="type">E-commerce / WooCommerce</div><h3>Custom WooCommerce Order System</h3><p>Worked with WooCommerce order workflows, custom order dashboards, delivery-charge rules, product pricing and order data management.</p></div><div class="result">Focus: PHP • WooCommerce • MySQL • Admin workflows</div></article>
+    <article class="card project"><div><div class="type">Landing Page / Checkout</div><h3>Conversion-focused Product Checkout</h3><p>Built and customized product landing/checkout experiences using Elementor and CartFlows, including simplified customer fields and product-specific checkout behavior.</p></div><div class="result">Focus: Elementor • CartFlows • WooCommerce • UX</div></article>
+    <article class="card project"><div><div class="type">Tracking / Marketing</div><h3>Purchase Tracking Troubleshooting</h3><p>Investigated Google Tag Manager and advertising conversion tracking issues around WooCommerce purchase/thank-you-page events.</p></div><div class="result">Focus: GTM • WooCommerce • Events • Debugging</div></article>
+    <article class="card project"><div><div class="type">Hosting / Infrastructure</div><h3>WordPress VPS & Cloudflare Setup</h3><p>Hands-on work with Ubuntu VPS hosting, CloudPanel, Cloudflare DNS/proxying, SSL behavior, PHP versions and multiple WordPress installations.</p></div><div class="result">Focus: Linux • CloudPanel • Cloudflare • SSL/DNS</div></article>
+    <article class="card project"><div><div class="type">Custom Business Tool</div><h3>PHP/MySQL Order Dashboard</h3><p>Worked on a custom PHP/MySQL administration workflow for managing product information and order-related operations outside the standard WordPress admin experience.</p></div><div class="result">Focus: PHP • MySQL • Admin UI • Business logic</div></article>
+    <article class="card project"><div><div class="type">Website Operations</div><h3>Multi-site WordPress Maintenance</h3><p>Worked across multiple WordPress sites involving migrations, DNS/domain changes, plugin behavior, database operations, checkout changes and live-site troubleshooting.</p></div><div class="result">Focus: Maintenance • Debugging • Deployment</div></article>
+  </div>
+</div>
+</section>
 
+<section id="skills">
+<div class="container">
+  <div class="eyebrow">Technical skills</div><h2>My current toolkit.</h2>
+  <p class="sectionintro">A practical WordPress-focused stack suitable for developer, support specialist and WooCommerce roles.</p>
+  <div class="skills">
+    <span class="skill">WordPress</span><span class="skill">WooCommerce</span><span class="skill">PHP</span><span class="skill">MySQL</span><span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span><span class="skill">WordPress Hooks</span><span class="skill">Theme Customization</span><span class="skill">Plugin Development</span><span class="skill">Elementor</span><span class="skill">CartFlows</span><span class="skill">Google Tag Manager</span><span class="skill">Cloudflare</span><span class="skill">CloudPanel</span><span class="skill">Ubuntu/Linux</span><span class="skill">DNS</span><span class="skill">SSL</span><span class="skill">REST APIs</span><span class="skill">Debugging</span>
+  </div>
+</div>
+</section>
+
+<section id="about">
+<div class="container about">
+  <div>
+    <div class="eyebrow">About me</div><h2>Developer mindset, business focus.</h2>
+    <p>I’m a Bangladesh-based WordPress developer building practical solutions for websites and online businesses.</p>
+    <p>My work is centered around WordPress, WooCommerce, PHP and troubleshooting. I enjoy taking a real business problem — a broken checkout, custom order workflow, tracking issue or hosting problem — and turning it into a working solution.</p>
+    <p>I’m continuing to deepen my PHP, WordPress hooks, theme development and plugin development skills so I can take on more advanced developer and support roles.</p>
+  </div>
+  <div class="timeline">
+    <div><strong>WordPress & WooCommerce</strong><span>Hands-on business websites, stores, landing pages and checkout systems</span></div>
+    <div><strong>PHP & Database Work</strong><span>Custom functionality, MySQL operations, admin workflows and debugging</span></div>
+    <div><strong>Hosting & Troubleshooting</strong><span>VPS, CloudPanel, Cloudflare, SSL, DNS and deployment issues</span></div>
+    <div><strong>Next Focus</strong><span>Advanced hooks, theme development, plugin architecture and scalable WordPress development</span></div>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+  <div class="contact">
+    <div class="eyebrow">Available for work</div>
+    <h2>Have a WordPress problem to solve?</h2>
+    <p>I'm interested in WordPress developer, WooCommerce, WordPress support and custom PHP projects.</p>
+    <div class="buttons">
+      <!-- Replace these placeholders with your real contact details -->
+      <a class="btn primary" href="mailto:YOUR_EMAIL@example.com">Email Me</a>
+      <a class="btn secondary" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+      <a class="btn secondary" href="https://github.com/" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<footer><div class="container">© 2026 Mohommad Didar. WordPress Developer.</div></footer>
 </body>
 </html>
